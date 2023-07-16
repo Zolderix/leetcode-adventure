@@ -6,7 +6,7 @@ if (POLICY CMP0025)
 endif ()
 
 project(leetCodeAdventure VERSION 1.0 LANGUAGES CXX)
-option(PRIME_CALC_TESTING "Включить модульное тестирование" ON)
+option(PRIME_CALC_TESTING "Включить модульное тестирование" OFF)
 option(PRIME_CALC_COVERAGE "Включить измерение покрытия кода тестами" OFF)
 add_compile_options(
         #        -Werror

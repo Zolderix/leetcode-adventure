@@ -6,14 +6,14 @@
 
 #include "solutions/base/Solution.h"
 
-static class MainFunction
+class MainFunction
 {
 public:
     MainFunction()
     {
         createSolutions();
     }
-
+    
     int start() 
     {
         selectScenario();
