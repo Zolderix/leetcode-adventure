@@ -4,7 +4,8 @@
 #include <map>
 #include <string_view>
 
-#include "solutions/base/Solution.h"
+#include "solutions/base/Solution.hpp"
+#include "solutions/ContainsDuplicate/ContainsDuplicate.hpp"
 
 class MainFunction
 {
@@ -32,9 +33,7 @@ public:
 private:
     void createSolutions()
     {
-        _solutions.push_back(std::make_shared<Solution>("test"));
-        _solutions.push_back(std::make_shared<Solution>("test2"));
-        _solutions.push_back(std::make_shared<Solution>("test3"));
+        _solutions.push_back(std::make_shared<ContainsDuplicate>());
     }
 
     void selectScenario()
@@ -87,6 +86,7 @@ private:
     std::shared_ptr<Solution> _pickedSolution = nullptr;
     std::vector<std::shared_ptr<Solution>> _solutions = {};
     int _solutionNum = 0;
+
 };
 
 int main()

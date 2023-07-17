@@ -1,0 +1,40 @@
+{
+    "version": 3,
+    "cmakeMinimumRequired": {
+        "major": 3,
+        "minor": 19,
+        "patch": 0
+    },
+    "configurePresets": [
+        {
+            "name": "default",
+            "hidden": true,
+            "generator": "Ninja",
+            "binaryDir": "${sourceDir}/.cmake/${presetName}",
+            "cacheVariables": {
+            },
+            "vendor": {
+                "jetbrains.com/clion": {
+                    "!reference": "https://www.jetbrains.com/help/clion/cmake-presets.html#load-preset"
+                },
+                "microsoft.com/VisualStudioSettings/CMake/1.0": {
+                    "!reference": "https://learn.microsoft.com/en-us/cpp/build/cmake-presets-json-reference?view=msvc-170",
+                    "hostOS": [
+                        "Windows"
+                    ],
+                    "intelliSenseMode": "windows-clang-x64"
+                }
+            }
+        },
+        {
+            "inherits": [
+                "default"
+            ],
+            "name": "debug",
+            "displayName": "Debug",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "debug"
+            }
+        }
+    ]
+}
